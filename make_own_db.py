@@ -4,6 +4,7 @@ import urllib.parse
 from tmdb_helpers import get_user_api_key
 from tmdb_helpers import make_tmdb_api_request
 
+
 def load_films(user_api_key, films_amount=1000):
     all_films = []
     for film_id in range(films_amount):
@@ -17,6 +18,7 @@ def load_films(user_api_key, films_amount=1000):
         finally:
             print('%s percent complete' % str(film_id*100/ films_amount))
     return all_films
+
 
 if __name__ == '__main__':
     user_api_key = get_user_api_key()
